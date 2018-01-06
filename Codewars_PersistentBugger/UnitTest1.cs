@@ -16,7 +16,7 @@ namespace Codewars_PersistentBugger
     {
         public static int Persistence(int n)
         {
-            throw new System.NotImplementedException();
+            return 0;
         }
     }
 }
