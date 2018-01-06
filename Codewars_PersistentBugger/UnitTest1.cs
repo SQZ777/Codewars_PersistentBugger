@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Codewars_PersistentBugger
@@ -57,19 +58,19 @@ namespace Codewars_PersistentBugger
         [TestMethod]
         public void Input_39_Should_Be_3()
         {
-            Assert.AreEqual(3,Persist.Persistence(39));
+            Assert.AreEqual(3, Persist.Persistence(39));
         }
 
         [TestMethod]
         public void Input_999_Should_Be_4()
         {
-            Assert.AreEqual(4,Persist.Persistence(999));
+            Assert.AreEqual(4, Persist.Persistence(999));
         }
 
         [TestMethod]
         public void Input_25_Should_Be_2()
         {
-            Assert.AreEqual(2,Persist.Persistence(25));
+            Assert.AreEqual(2, Persist.Persistence(25));
         }
 
     }
@@ -78,13 +79,8 @@ namespace Codewars_PersistentBugger
     {
         public static int Persistence(long n)
         {
-            var result = 0;
-            while (n > 9)
-            {
-                n = DigitMutiply(n);
-                result++;
-            }
-            return result;
+            
+            return n < 10 ? 0 : Persistence(DigitMutiply(n)) + 1;
         }
 
         public static int DigitMutiply(long n)
