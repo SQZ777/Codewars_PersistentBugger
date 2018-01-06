@@ -54,7 +54,13 @@ namespace Codewars_PersistentBugger
     {
         public static int Persistence(long n)
         {
-            return 0;
+            var result = 0;
+            while (n > 9)
+            {
+                n = DigitMutiply(n);
+                result++;
+            }
+            return result;
         }
 
         public static int DigitMutiply(long n)
