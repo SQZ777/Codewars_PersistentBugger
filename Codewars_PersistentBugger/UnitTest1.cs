@@ -54,6 +54,24 @@ namespace Codewars_PersistentBugger
             Assert.AreEqual(2, Persist.Persistence(28));
         }
 
+        [TestMethod]
+        public void Input_39_Should_Be_3()
+        {
+            Assert.AreEqual(3,Persist.Persistence(39));
+        }
+
+        [TestMethod]
+        public void Input_999_Should_Be_4()
+        {
+            Assert.AreEqual(4,Persist.Persistence(999));
+        }
+
+        [TestMethod]
+        public void Input_25_Should_Be_2()
+        {
+            Assert.AreEqual(2,Persist.Persistence(25));
+        }
+
     }
 
     public class Persist
